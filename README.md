@@ -18,3 +18,5 @@
 
 Дополнительно скрипт "countlines_logfile.sh" вывода количества строк с лог-файлов системы: 
 "/var/log/messages" и "/var/log/syslog"
+
+Запуск скрипта "countlines_logfile.sh" с ключем -a или --all даст более детальную информацию.
