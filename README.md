@@ -16,7 +16,7 @@
 
 3) Модифицировать файлы для выполнения, запустив команду в текущей директории из скриптами:
 
-    chmod +x *.sh
+        chmod +x *.sh
 
 4) Далее запустить скрипт установки "install_zabbix-agent.sh"
 
@@ -26,3 +26,5 @@
 "/var/log/messages" и "/var/log/syslog"
 
 Запуск скрипта "countlines_logfile.sh" с ключем -a или --all даст более детальную информацию.
+
+        countlines_logfile.sh -a
