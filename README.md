@@ -2,17 +2,23 @@
 
 Данный скрипт позволяет установить zabbix-agent на Linux-системы (Debian, Ubuntu).
 
-1) Необходимо внести данные о zabbix-server и имени текущего ПК в конфигурационный файл "zabbix_agentd.conf":
+1) Клонируем проект на ПК:
 
-    #Server=IP address of Zabbix Server
+        git clone https://github.com/nikonlines/zabbix-agent
+        
+        cd zabbix-agent
 
-    #Hostname=Hostname of client PC
+2) Необходимо внести данные о zabbix-server и имени текущего ПК в конфигурационный файл "zabbix_agentd.conf":
 
-2) Модифицировать файлы для выполнения, запустив команду в текущей директории из скриптами:
+        #Server=IP address of Zabbix Server
+
+        #Hostname=Hostname of client PC
+
+3) Модифицировать файлы для выполнения, запустив команду в текущей директории из скриптами:
 
     chmod +x *.sh
 
-3) Далее запустить скрипт установки "install_zabbix-agent.sh"
+4) Далее запустить скрипт установки "install_zabbix-agent.sh"
 
 --------------------------------------
 
