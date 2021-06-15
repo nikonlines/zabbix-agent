@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>5.4</version>
-    <date>2021-06-15T13:35:39Z</date>
+    <date>2021-06-15T15:29:27Z</date>
     <groups>
         <group>
             <uuid>846977d1dfed4968bc5f8bdb363285bc</uuid>
@@ -20,8 +20,15 @@
             </groups>
             <items>
                 <item>
+                    <uuid>b31977fe837143a9a29322884eb0311f</uuid>
+                    <name>Log count lines external script</name>
+                    <key>countlines_logfile</key>
+                    <delay>30s</delay>
+                    <history>3600</history>
+                </item>
+                <item>
                     <uuid>b610fdfb2e4844c7868da59aa8948d96</uuid>
-                    <name>Log journal (Messages)</name>
+                    <name>Log count lines  (Messages)</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>log.count[/var/log/messages]</key>
                     <delay>30s</delay>
@@ -30,7 +37,7 @@
                 </item>
                 <item>
                     <uuid>67f1a84f634547aeabcdd188f367eb84</uuid>
-                    <name>Log journal (Syslog)</name>
+                    <name>Log count lines (Syslog)</name>
                     <type>ZABBIX_ACTIVE</type>
                     <key>log.count[/var/log/syslog]</key>
                     <delay>30s</delay>
@@ -58,6 +65,14 @@
                     <item>
                         <host>Logmon_linux</host>
                         <key>log.count[/var/log/syslog]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>3</sortorder>
+                    <color>00FF00</color>
+                    <item>
+                        <host>Logmon_linux</host>
+                        <key>countlines_logfile</key>
                     </item>
                 </graph_item>
             </graph_items>
