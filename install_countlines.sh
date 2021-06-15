@@ -24,7 +24,7 @@ else
 fi
 
 #Создаем файл настроек для параметра countlines_logfile, который будем мониторить
-echo "UserParameter=countlines_logfile,$folder_metric$file_metric" > $folder_config$file_config
+sudo sh -c "echo "UserParameter=countlines_logfile,$folder_metric$file_metric" > $folder_config$file_config"
 
 #Перезапускаем заббикс-агента
 sudo systemctl restart zabbix-agent
