@@ -10,11 +10,13 @@
 
 2) Необходимо внести данные о zabbix-server и имени текущего ПК в конфигурационный файл "zabbix_agentd.conf":
 
-        Server=IP address of Zabbix Server
-
-        Hostname=Hostname of client PC
+        Server=<IP-адрес или DNS-ия Zabbix-сервера>
         
-   или указать HostnameItem
+        ServerActive=<IP-адрес или DNS-ия Zabbix-сервера>
+
+        Hostname=<Локальное имя ПК или IP-адрес>
+        
+   или раскомментировать строчку HostnameItem
         
         HostnameItem=system.hostname
 
@@ -36,6 +38,12 @@
 Запуск скрипта "countlines_logfile.sh" с ключем -a или --all даст более детальную информацию.
 
         ./countlines_logfile.sh -a
+
+Установку "countlines_logfile.sh" скрипта можно выполнить скриптом "install_countlines.sh"
+
+        ./install_countlines.sh
+
+--------------------------------------       
 
 Темплейт сбора метрик количества строк в лог-файлах и вывод на график (Пока в разработке, тестируется на Zabbix 5.4.1):
 
