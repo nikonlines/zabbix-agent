@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.4</version>
+    <date>2021-06-15T06:32:00Z</date>
+    <groups>
+        <group>
+            <uuid>846977d1dfed4968bc5f8bdb363285bc</uuid>
+            <name>Templates/Operating systems</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <uuid>30a513a0f2b5405dbe4fe4fe86c21616</uuid>
+            <template>Logmon_linux</template>
+            <name>Logmon_linux</name>
+            <groups>
+                <group>
+                    <name>Templates/Operating systems</name>
+                </group>
+            </groups>
+            <items>
+                <item>
+                    <uuid>b610fdfb2e4844c7868da59aa8948d96</uuid>
+                    <name>Log journal (Messages)</name>
+                    <type>ZABBIX_ACTIVE</type>
+                    <key>log.count[&quot;/var/log/messages&quot;,ERROR]</key>
+                    <delay>30s</delay>
+                    <history>3600</history>
+                </item>
+                <item>
+                    <uuid>67f1a84f634547aeabcdd188f367eb84</uuid>
+                    <name>Log journal (Syslog)</name>
+                    <type>ZABBIX_ACTIVE</type>
+                    <key>log.count[&quot;/var/log/syslog&quot;,ERROR]</key>
+                    <delay>30s</delay>
+                    <history>3600</history>
+                </item>
+            </items>
+        </template>
+    </templates>
+    <graphs>
+        <graph>
+            <uuid>d6f6e6d8d60e43c787aaff28e84d548c</uuid>
+            <name>Log_item</name>
+            <graph_items>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <color>F63100</color>
+                    <item>
+                        <host>Logmon_linux</host>
+                        <key>log.count[&quot;/var/log/messages&quot;,ERROR]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>2</sortorder>
+                    <color>2774A4</color>
+                    <item>
+                        <host>Logmon_linux</host>
+                        <key>log.count[&quot;/var/log/syslog&quot;,ERROR]</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+    </graphs>
+</zabbix_export>
